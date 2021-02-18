@@ -43,7 +43,7 @@
         </section>
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
-            <a class="button new" onclick="Modal.open()" href="#">+ Nova Transação</a>
+            <a class="button new" onclick="Modal.toggle()" href="#">+ Nova Transação</a>
             <table id="data-table">
                 <thead>
                     <tr>
@@ -54,30 +54,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">- R$500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Criação website</td>
-                        <td class="income">R$5.000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">- R$200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </section>
@@ -104,7 +80,7 @@
                         <input id="date" type="date" name="date">
                     </div>
                     <div class="input-group actions">
-                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <a href="#" onclick="Modal.toggle()" class="button cancel">Cancelar</a>
                         <button>Salvar</button>
                     </div>
                 </form>
@@ -112,26 +88,7 @@
         </div>
     </div>
 
-    <script>
-        const Modal = {
-            open() {
-                // Abrir modal
-                // Adicionar a classe "active" ao modal
-                document
-                    .querySelector('.modal-overlay')
-                    .classList
-                        .add("active");
-            },
-            close() {
-                // Fechar modal
-                // Retirar a classe "active" do modal
-                document
-                    .querySelector(".modal-overlay")
-                    .classList
-                        .remove("active");
-            }
-        };
-    </script>
+    <script src="./script.js"></script>
 
     <footer>
         <p>dev.finance$</p>
